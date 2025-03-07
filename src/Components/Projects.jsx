@@ -65,11 +65,11 @@ const ProjectsSection = () => {
             <img src={project.image} alt={project.title} className="w-full h-auto mb-14 rounded" />
             {/* <h2 className="text-xl font-semibold mt-2">{project.title}</h2> */}
             <div className='absolute left-0 right-0 bottom-5 flex justify-center'>
-                <div className='inline-block bg-white w-3/4 px-4 py-2 shadow-md '>
+                <div className='inline-block bg-white w-3/4 px-2 py-2 shadow-md '>
                 <h2 className='text-xl font-semibold text-gray-800'>
                     {project.title}
                 </h2>
-                <p>{project.price} <span>|</span></p> {project.location}
+                <p className='text-2'>{project.price} <span className=''>|</span></p> {project.location}
                 </div>
 
             </div>
