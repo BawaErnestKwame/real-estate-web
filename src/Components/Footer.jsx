@@ -1,9 +1,15 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <div className='pt-10 px-4 md:px-20 lg:-32 bg-gray-900 w-full overflow-hidden' id='Footer'>
+    <motion.div className='pt-10 px-4 md:px-20 lg:-32 bg-gray-900 w-full overflow-hidden' id='Footer' 
+    
+    initial={{ opacity: 0, y: 100 }}  
+    whileInView={{ opacity: 1, y: 0 }}  
+    transition={{ duration: 1 }}
+    viewport={{ once: false, amount: 0.3 }} >
               <div className='container mx-auto flex flex-col md:flex-row justify-between items-start'>
         <div className='w-full md:w-1/3 mb-8 md:mb-0'>
             <img src={assets.logo_dark} alt="" />
@@ -21,7 +27,9 @@ const Footer = () => {
             </ul>
 
         </div>
-        <div className='w-full md:w-1/3'>
+        <div className='w-full md:w-1/3'
+           
+        >
         <h3 className='text-white text-lg font-bold mb-4'>Subscribe to Our News Letter</h3>
         <p className='text-gray-400 mb-4 max-w-80'>The latest new, articles and resources, sent to your inbox weekly.</p>
         <div className=' flex gap-2'>
@@ -34,7 +42,7 @@ const Footer = () => {
         <div className='border-t border-gray-700 py-4 mt-10 text-center text-gray-500'>
           Copyright 2025 @ BAWA Ernest Kwame. All Right Reserved.
         </div>
-    </div>
+    </motion.div>
   )
 }
 
